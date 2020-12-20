@@ -27,14 +27,14 @@ const app = Vue.createApp({
             this.inputTitle = "";
             this.inputText = "";
             this.isColored = false;
-            this.color = "";
+            this.noteColor = "";
             this.saveToLocalStorage();
         },
         openAddModal() {
             this.inputTitle = "";
             this.inputText = "";
             this.isColored = false;
-            this.color = "";
+            this.noteColor = "";
             var myModal = new bootstrap.Modal(document.getElementById('addNoteModal'));
             myModal.show();
         },
@@ -58,7 +58,7 @@ const app = Vue.createApp({
             this.inputTitle = "";
             this.inputText = "";
             this.isColored = false;
-            this.color = "";
+            this.noteColor = "";
             this.saveToLocalStorage();
         },
         saveToLocalStorage() {
