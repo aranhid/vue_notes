@@ -51,14 +51,22 @@ const app = Vue.createApp({
         saveModifiedNote() {
             let note = this.getNoteById(this.modifiedNote.id);
             let index = this.notes.indexOf(note);
+
             this.notes[index].title = this.inputTitle;
             this.notes[index].text = this.inputText;
+            this.notes[index].isColored = this.isColored;
+            this.notes[index].color = this.noteColor;
+
             this.modifiedNote.title = this.inputTitle;
             this.modifiedNote.text = this.inputText;
+            this.modifiedNote.isColored = this.isColored;
+            this.modifiedNote.color = this.noteColor;
+
             this.inputTitle = "";
             this.inputText = "";
             this.isColored = false;
             this.noteColor = "";
+            
             this.saveToLocalStorage();
         },
         saveToLocalStorage() {
